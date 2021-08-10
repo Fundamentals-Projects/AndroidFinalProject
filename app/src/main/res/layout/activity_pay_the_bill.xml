@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PayTheBillActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:text="Pay Bills"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/txtSubscriptionNumber"
+        app:layout_constraintStart_toStartOf="@+id/txtSubscriptionNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubscriptionNumber" />
+
+    <EditText
+        android:id="@+id/txtSubscriptionNumber"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Subscription Number"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/billTypeGroup"
+        app:layout_constraintStart_toStartOf="@+id/billTypeGroup"
+        app:layout_constraintTop_toBottomOf="@+id/billTypeGroup" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <CheckBox
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Save for next time"
+        android:textColor="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="373dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:text="Pay the Bill"
+        app:layout_constraintEnd_toEndOf="@+id/btnSave"
+        app:layout_constraintStart_toStartOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:text="Account:"
+        android:textColor="@color/blue_500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtAmount"
+        app:layout_constraintStart_toStartOf="@+id/txtAmount"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmount" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:text="Type:"
+        android:textColor="@color/blue_500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/spBillsSaved"
+        app:layout_constraintStart_toStartOf="@+id/txtSaved"
+        app:layout_constraintTop_toBottomOf="@+id/spBillsSaved" />
+
+    <TextView
+        android:id="@+id/txtSaved"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Saved:"
+        android:textColor="@color/blue_500"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <RadioGroup
+        android:id="@+id/billTypeGroup"
+        android:layout_width="0dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <RadioButton
+            android:id="@+id/rdHydro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hydro"
+            android:textColor="@color/blue_500" />
+
+        <RadioButton
+            android:id="@+id/rdWater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Water"
+            android:textColor="@color/blue_500" />
+
+        <RadioButton
+            android:id="@+id/rdGas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gas"
+            android:textColor="@color/blue_500" />
+
+        <RadioButton
+            android:id="@+id/rdPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textColor="@color/blue_500" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="&lt;&lt;back"
+        android:textColor="@color/blue_500"
+        android:textSize="16sp"
+        android:onClick="goBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spBillsSaved"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/txtSaved"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
